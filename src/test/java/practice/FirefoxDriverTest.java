@@ -14,7 +14,7 @@ public class FirefoxDriverTest {
         // System.setProperty("webdriver.chrome.driver", "./Resources/chromedriver");
         // System.setProperty("webdriver.chrome.driver","./msedgedriver.exe");
 
-        System.setProperty("webdriver.gecko.driver", "./Resources/geckodriver.exe");
+//        System.setProperty("webdriver.gecko.driver", "./Resources/geckodriver.exe");
 
         // Initialize Gecko Driver using Desired Capabilities Class
 
