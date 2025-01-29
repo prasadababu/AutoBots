@@ -1,6 +1,6 @@
 package practice;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;

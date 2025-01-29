@@ -1,11 +1,10 @@
 package practice;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class AssertionsTest {
     @Test
@@ -19,18 +18,17 @@ public class AssertionsTest {
         WebDriver driver = new ChromeDriver(options);
         driver.get("https://google.com");
 
-        assertTrue(true, "unable to assert");
+        Assert.assertTrue(true, "unable to assert");
         driver.quit();
     }
 
     @Test
     void standardAssertions() {
-
-        assertTrue(true, "unable to assert");
+        Assert.assertTrue(true, "unable to assert");
     }
 
     @Test
     void groupedAssertions() {
-        assertTrue(true, "unable to assert");
+        Assert.assertTrue(true, "unable to assert");
     }
 }

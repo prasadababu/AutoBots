@@ -4,4 +4,6 @@
 /.vscode/
 /.project
 /.classpath
+/ReportsAndScreenshots/*
+/test-output
 

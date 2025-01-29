@@ -11,17 +11,24 @@
     <dependencies>
         <!-- junit 5 -->
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.11.4</version>
             <scope>test</scope>
-        </dependency>
+        </dependency> -->
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
             <version>5.11.4</version>
+            <scope>test</scope>
+        </dependency> -->
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -76,9 +83,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.2</version>
                 <configuration>
-                    <includes>
-                        <include>junit/JunitParallelTest.java</include>
-                    </includes>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>Testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <excludes>
+                        <exclude>practice/*.java</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
             <plugin>

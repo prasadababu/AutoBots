@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="MySuite" parallel="methods" thread-count="2">
+    <!-- Include the SuiteConfig class to handle before and after suite logic -->
+    <test name="SuiteSetupTest">
+        <classes>
+            <class name="setup.SuiteSetup"/>
+        </classes>
+    </test>
+
+    <!-- Include TestClass1 to run the actual tests -->
+    <test name="TestClass1Test">
+        <classes>
+            <class name="testNG.testNGParallelTest"/>
+        </classes>
+    </test>
+</suite>
