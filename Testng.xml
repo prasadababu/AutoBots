@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="MySuite" parallel="methods" thread-count="2">
+<suite name="MySuite" parallel="methods" thread-count="1">
     <!-- Include the SuiteConfig class to handle before and after suite logic -->
-    <test name="SuiteSetupTest">
+    <test name="TestSuiteSetup">
         <classes>
             <class name="setup.SuiteSetup"/>
         </classes>
@@ -9,6 +9,12 @@
 
     <!-- Include TestClass1 to run the actual tests -->
     <test name="TestClass1Test">
+        <groups>
+            <run>
+                <!-- <include name="sanity"/> -->
+                 <exclude name="regression"/>
+            </run>
+        </groups>
         <classes>
             <class name="testNG.testNGParallelTest"/>
         </classes>

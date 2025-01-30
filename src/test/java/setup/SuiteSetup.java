@@ -10,10 +10,13 @@ public class SuiteSetup {
     @BeforeSuite
     void setupReports() {
         ExtentManager.initiateReporter();
+        System.out.println("&&&&&&&&&&&&&&&");
     }
 
     @AfterSuite
     void closeReport() {
         ExtentManager.flush(); // Flush once at the end of all tests
+        System.out.println("@@@@@@@@@@@@@@@");
+
     }
 }
