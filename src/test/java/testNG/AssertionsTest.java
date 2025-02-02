@@ -4,8 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import setup.TestListener;
+@Listeners(TestListener.class)
 public class AssertionsTest {
     @Test(groups = {"sanity"})
     public void marry() throws InterruptedException {

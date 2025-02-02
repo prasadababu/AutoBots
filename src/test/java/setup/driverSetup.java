@@ -23,6 +23,7 @@ public class driverSetup extends baseMethods {
     @BeforeMethod
     public void before(Method method) {
         // Initialize WebDriver for each test method
+        
         ExtentManager.initiateReporter();
         String description=method.getAnnotation(Test.class).description();
         if (description.isEmpty()) {
@@ -41,6 +42,7 @@ public class driverSetup extends baseMethods {
         if (driver.get() != null) {
             driver.get().quit();
         }
+        ExtentManager.flush();
     }
 
     public WebDriver getDriver() {

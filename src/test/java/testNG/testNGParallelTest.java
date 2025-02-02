@@ -1,14 +1,20 @@
 package testNG;
 
 import base.ExtentManager;
+import setup.RetryAnalyzer;
+import setup.SimpleReporter;
+// import setup.CustomReporter;
+import setup.TestListener;
 import setup.driverSetup;
+// import setup.reportListener;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.*;
 
 // import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-
+// @Listeners(SimpleReporter.class)
 public class testNGParallelTest extends driverSetup {
     // ExtentTest test;
     @Test(description = "Googleeeeeeeeeeeeeee", groups = {"sanity"})
@@ -22,7 +28,7 @@ public class testNGParallelTest extends driverSetup {
         ExtentManager.getTest().log(Status.PASS, "Navigated to google.com");
     }
 
-    @Test(groups = {"sanity"})
+    @Test(groups = {"sanity"},retryAnalyzer = RetryAnalyzer.class)
     public void power() throws InterruptedException {
         getDriver().get("https://facebook.com");
         ExtentManager.getTest().log(Status.INFO, "launch facebook");

@@ -6,8 +6,6 @@ import java.util.List;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import lombok.Data;
-
 public class dataProviderTest {
 
 @DataProvider(name="naming")

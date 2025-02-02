@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="MySuite" parallel="methods" thread-count="1">
+
+    <listeners>
+        <listener class-name="setup.TestListener" />
+    </listeners>
     <!-- Include the SuiteConfig class to handle before and after suite logic -->
     <test name="TestSuiteSetup">
         <classes>
-            <class name="setup.SuiteSetup"/>
+            <!-- <class name="setup.SuiteSetup" /> -->
         </classes>
     </test>
 
+
     <!-- Include TestClass1 to run the actual tests -->
     <test name="TestClass1Test">
+
         <groups>
             <run>
                 <!-- <include name="sanity"/> -->
-                 <exclude name="regression"/>
+                <!-- <exclude name="regression" /> -->
             </run>
         </groups>
         <classes>
-            <class name="testNG.testNGParallelTest"/>
+            <class name="testNG.testNGParallelTest" />
         </classes>
     </test>
 </suite>
