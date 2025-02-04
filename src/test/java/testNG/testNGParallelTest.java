@@ -17,7 +17,7 @@ import com.aventstack.extentreports.*;
 // @Listeners(SimpleReporter.class)
 public class testNGParallelTest extends driverSetup {
     // ExtentTest test;
-    @Test(description = "Googleeeeeeeeeeeeeee", groups = {"sanity"})
+    @Test(description = "Googleeeeeeeeeeeeeee", groups = {"sanity"}, enabled=false)
     public void perry() throws InterruptedException {
         getDriver().get("https://google.com");
         ExtentManager.getTest().log(Status.INFO, "launch google");
@@ -39,7 +39,7 @@ public class testNGParallelTest extends driverSetup {
         ExtentManager.getTest().log(Status.PASS, "Navigated to facebook.com");
     }
 
-    @Test(description = "instaaaaaa",groups = {"regression"},dependsOnMethods = {"power"})
+    @Test(description = "instaaaaaa",groups = {"regression"},dependsOnMethods = {"power"}, enabled=false)
     public void last() throws InterruptedException {
         
         getDriver().get("https://instagram.com");

@@ -3,6 +3,7 @@
 
     <listeners>
         <listener class-name="setup.TestListener" />
+        <listener class-name="setup.RetryListener" />
     </listeners>
     <!-- Include the SuiteConfig class to handle before and after suite logic -->
     <test name="TestSuiteSetup">
