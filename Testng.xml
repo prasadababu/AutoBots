@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="MySuite" parallel="tests" thread-count="1">
+<suite name="MySuite" parallel="methods" thread-count="2">
 
     <listeners>
         <!-- <listener class-name="setup.TestListener" /> -->
