@@ -17,7 +17,7 @@ public class TestLogin extends driverSetup {
 		LandingPage landingPage = new LandingPage(getDriver());
 		getDriver().get("https://practicetestautomation.com/practice-test-login/");
 		ExtentManager.getTest().log(Status.INFO, "Login Page");
-		infoLogScreenshot(getDriver(), ExtentManager.getTest(), "Login Page");
+		// infoLogScreenshot(getDriver(), ExtentManager.getTest(), "Login Page");
 		landingPage.enterUserName("student");
 		landingPage.enterPassword("Password123");
 		landingPage.clickSubmitButton();

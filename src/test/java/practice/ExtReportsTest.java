@@ -56,13 +56,12 @@ public class ExtReportsTest extends baseMethods {
         test = ExtentManager.extent.createTest("Facebook Test", "Test to validate facebook");
         WebDriver driver = new ChromeDriver();
         driver.get("https://facebook.com");
-       
         String title = driver.getTitle();
         String url = driver.getCurrentUrl();
         System.out.println(title);
         System.out.println(url);
         Thread.sleep(2000);
-        infoLogScreenshot(driver, test, "Facebook");
+        // infoLogScreenshot(driver, test, "Facebook");
         Assert.assertTrue(true);
         test.log(Status.PASS, "Navigated to fb.com");
         driver.close();
@@ -71,7 +70,7 @@ public class ExtReportsTest extends baseMethods {
     @Test
     public void assumeTest() throws InterruptedException {
         test = ExtentManager.extent.createTest("instagram Test", "Test to validate insta");
-       
+
         WebDriver driver = new ChromeDriver();
         driver.get("https://instagram.com");
         String title = driver.getTitle();
@@ -79,7 +78,7 @@ public class ExtReportsTest extends baseMethods {
         System.out.println(title);
         System.out.println(url);
         Thread.sleep(2000);
-        infoLogScreenshot(driver, test, "Instagram");
+        // infoLogScreenshot(driver, test, "Instagram");
         test.log(Status.PASS, "Navigated to instagram.com");
         Assert.assertTrue(true);
         driver.close();

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="MySuite" parallel="methods" thread-count="1">
+<suite name="MySuite" parallel="tests" thread-count="1">
 
     <listeners>
-        <listener class-name="setup.TestListener" />
-        <listener class-name="setup.RetryListener" />
+        <!-- <listener class-name="setup.TestListener" /> -->
+        <!-- <listener class-name="setup.RetryListener" /> -->
     </listeners>
     <!-- Include the SuiteConfig class to handle before and after suite logic -->
     <test name="TestSuiteSetup">
@@ -23,7 +23,8 @@
             </run>
         </groups>
         <classes>
-            <class name="testNG.testNGParallelTest" />
+            <!-- <class name="testNG.testNGParallelTest" /> -->
+              <class name="runner.TestRunner"/>
         </classes>
     </test>
 </suite>

@@ -23,11 +23,11 @@ public class driverSetup extends baseMethods {
     @BeforeMethod
     public void before(Method method) {
         // Initialize WebDriver for each test method
-        
+
         ExtentManager.initiateReporter();
-        String description=method.getAnnotation(Test.class).description();
+        String description = method.getAnnotation(Test.class).description();
         if (description.isEmpty()) {
-            description = method.getName();  // Use method name if description is empty
+            description = method.getName(); // Use method name if description is empty
         }
         test = ExtentManager.extent.createTest(description, "Test Description");
         ExtentManager.setTest(test); // Set the test for this thread
