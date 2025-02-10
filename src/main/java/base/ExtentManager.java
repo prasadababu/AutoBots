@@ -8,7 +8,7 @@ public class ExtentManager {
 
     public static ExtentReports extent;
     static ExtentSparkReporter spark;
-    final static String filePath = "ReportsAndScreenshots/report.html";
+    final static String filePath = "ReportsAndScreenshots/extent-report.html";
 
     // Thread-local variable to store ExtentTest instances for each test method.
     private static ThreadLocal<ExtentTest> extentTestThreadLocal = new ThreadLocal<>();
