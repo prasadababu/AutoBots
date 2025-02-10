@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
     features = "src/test/resources/features", 
     glue = {"stepdefinitions","base"},
     tags="not @Maintag",
-    plugin = {"pretty", "html:target/cucumber-reports/Report.html"})
+    plugin = {"pretty", "html:ReportsAndScreenshots/cucumber-report.html"})
 public class TestRunner extends AbstractTestNGCucumberTests{
     @Override
     @org.testng.annotations.DataProvider(parallel = true)
